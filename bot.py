@@ -1,3 +1,4 @@
+import os
 import telebot
 import imaplib
 import email
@@ -70,7 +71,6 @@ def buscar_codigo_en_bandeja(servidor, correo, password):
                             pass
 
                     # Buscar un código numérico de 4 a 6 dígitos típico de verificación
-                    # O puedes ajustar la expresión regular según el formato que veas
                     match = re.search(r'\b\d{4,6}\b', cuerpo)
                     if match:
                         codigo_encontrado = match.group(0)
